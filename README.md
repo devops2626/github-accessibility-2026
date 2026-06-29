@@ -13,5 +13,13 @@ A living multi-chapter book and community project.
 - [Chapter 6: Technical Implementation](./chapters/06-technical-implementation.md)
 - [Chapter 7: WCAG 2.2 Review & Checklist](./chapters/07-wcag-22-review.md)
 - [Chapter 8: Implementing New Success Criteria](./chapters/08-implementing-new-criteria.md)
+- [Chapter 9: Screen Reader Testing](./chapters/09-screen-reader-testing.md)
+- [Chapter 10: Keyboard Navigation Testing](./chapters/10-keyboard-navigation-testing.md)
 
-Contribute by opening PRs!
+## PDF Export Instructions
+Use tools like:
+- **Pandoc**: `pandoc README.md chapters/*.md -o GitHub-Accessibility-2026.pdf --pdf-engine=xelatex`
+- Online converters (Markdown to PDF)
+- MkDocs or GitBook for a full site + PDF
+
+Contributions welcome!
