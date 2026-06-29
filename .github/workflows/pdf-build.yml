@@ -1,0 +1,27 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pandoc and LaTeX
+        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
+      - name: Build PDF
+        run: |
+          pandoc --from markdown+yaml_metadata_block+table_captions+footnotes+smart \
+            metadata.yaml README.md chapters/*.md \
+            -o GitHub-Accessibility-2026.pdf \
+            --pdf-engine=xelatex \
+            --template=pandoc-template.tex \
+            --toc --number-sections
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: GitHub-Accessibility-2026.pdf
+          path: GitHub-Accessibility-2026.pdf
