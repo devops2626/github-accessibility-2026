@@ -12,5 +12,6 @@ A living multi-chapter book and community project.
 - [Chapter 5: Vision for 2026](./chapters/05-vision.md)
 - [Chapter 6: Technical Implementation](./chapters/06-technical-implementation.md)
 - [Chapter 7: WCAG 2.2 Review & Checklist](./chapters/07-wcag-22-review.md)
+- [Chapter 8: Implementing New Success Criteria](./chapters/08-implementing-new-criteria.md)
 
 Contribute by opening PRs!
