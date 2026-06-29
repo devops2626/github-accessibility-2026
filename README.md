@@ -17,10 +17,9 @@ A living multi-chapter book and community project.
 - [Chapter 10: Keyboard Navigation Testing](./chapters/10-keyboard-navigation-testing.md)
 
 ## PDF Export Instructions
-1. Install Pandoc
-2. Use the included template:
-   ```bash
-   pandoc README.md chapters/*.md -o GitHub-Accessibility-2026.pdf --pdf-engine=xelatex --template=pandoc-template.tex
-   ```
+Use:
+```bash
+pandoc --from markdown+yaml_metadata_block metadata.yaml README.md chapters/*.md -o GitHub-Accessibility-2026.pdf --pdf-engine=xelatex --template=pandoc-template.tex
+```
 
 Contributions welcome!
